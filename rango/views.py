@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from django.core.urlresolvers import reverse
 # Import the Category model
 from rango.models import Category
 from rango.models import Page
@@ -74,6 +75,9 @@ def about(request):
     return render(request, 'rango/about.html')
 
 
+
+
+
 def add_category(request):
     form = CategoryForm()
     # A HTTP POST?
@@ -115,4 +119,4 @@ def add_page(request, category_name_slug):
         else:
             print(form.errors)
     context_dict = {'form':form, 'category': category}
-    return render(request, 'rango/add_page.html', context_dict) 
+    return render(request, 'rango/add_page.html', context_dict)
