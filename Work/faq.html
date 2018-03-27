@@ -1,0 +1,108 @@
+<style type="text/css">
+<!--
+a:link {
+	color: #0E3C29;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+}
+-->
+</style>
+{% extends 'ratemy/base_bootstrap.html' %}
+{% load staticfiles %}
+{% load ratemy_template_tags %}
+{% static 'css/faq.css' %} 
+
+{% block head_block %}
+
+<title>FAQs</title>
+
+<link rel="stylesheet" href="{% static "css/faq.css" %}" />
+
+<script src="{% static "js/faq.js" %}"></script> <!--JQuery attached-->
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".a").hide();
+	$(".q").click(function(){
+        $(this).next().slideToggle();
+    });
+});
+</script>-->
+
+{% endblock %}
+
+{%block style_block%}
+
+div{
+  background-color: powderblue;
+  margin: 10px 0px auto;
+  padding: 0;
+  width: 100%;
+}
+
+li{
+  width: 90%;
+  display: block;
+  font-size: 14px;
+  font-family: Tahoma;
+  padding: 10px;
+  margin: 10px auto;
+  color: #0E3C29;
+}
+
+li.q{
+  font-size: 1.3em;
+  cursor: pointer;
+  background-color: #ccc;
+}
+
+li.c{
+  font-size: 1.3em;
+  cursor: pointer;
+  background-color: #ccc;
+}
+
+li.q::before{
+	content:"+";
+	margin-right:10px;
+}
+
+
+li.a{
+  margin-left: 10px;
+  font-size: 1em;
+}
+
+
+
+{% endblock %}
+
+{% block body_block %}
+ <p>Mamu Tariq</p>
+
+<div>
+  <ul>
+    <li class="q">What is RateMy?</li>
+    <li class="a">RateMy, a standardized social media platform where a people can make posts about their daily lives.</li>
+    <li class="q">What is CSS?</li>
+    <li class="a">Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language.</li>
+    <li class="q">What is JavaScript?</li>
+    <li class="a">an object-oriented computer programming language commonly used to create interactive effects within web browsers.</li>
+    <li class="q">What is jQuery?</li>
+    <li class="a">jQuery is a cross-platform JavaScript library designed to simplify the client-side scripting of HTML. jQuery is the most popular JavaScript library in use today, with installation on 65% of the top 10 million highest-trafficked sites on the Web. jQuery
+      is free, open-source software licensed under the MIT License.</li>
+    <li class="c" ><a href="mailto:fahad8a@live.com">Contact Our Team Member.</a></li>
+  </ul>
+</div>
+
+
+{% endblock %}
